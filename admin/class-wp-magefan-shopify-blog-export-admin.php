@@ -95,7 +95,7 @@ class Plugin_Name_Admin {
 
             $export = new Export();
             $entity = $_GET['entity'];
-            $offSet = (int)($_GET['offset'] ?? 1);
+            $offSet = (int)($_GET['offset'] || 1);
             $allIds = isset($_GET['allIds']);
 
             switch($entity) {
