@@ -152,9 +152,9 @@ class Plugin_Name_Admin {
         function magefan_shopifyblogexport_push_data_to_shopify()
         {
 
-            $entity = (string)($_POST['entity'] ?? '');
-            $shopifyUrl = (string)($_POST['shopifyUrl'] ?? '');
-            $data = ($_POST['data'] ?? '');
+            $entity = (string)($_POST['entity'] || '');
+            $shopifyUrl = (string)($_POST['shopifyUrl'] || '');
+            $data = ($_POST['data'] || '');
 
             if (!$entity
                 || !$shopifyUrl

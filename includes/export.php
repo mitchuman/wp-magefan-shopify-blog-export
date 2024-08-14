@@ -114,7 +114,7 @@ class Export
         foreach ($arrayPosts as $post) {
             $featured_img_id = get_post_thumbnail_id($post['ID']);
 
-            $featured_img_url = wp_get_attachment_image_src($featured_img_id, 'full')[0] ?? '';  // Replace 'full' with desired size
+            $featured_img_url = wp_get_attachment_image_src($featured_img_id, 'full')[0] || '';  // Replace 'full' with desired size
 
             $upload_dir = wp_upload_dir();  // Get the base upload directory
             $base_path = trailingslashit($upload_dir['basedir']);
